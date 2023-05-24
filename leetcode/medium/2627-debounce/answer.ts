@@ -1,7 +1,6 @@
 type F = (...p: any[]) => any;
-
 function debounce(fn: F, t: number): F {
-  let timer = undefined;
+  let timer: any = undefined;
   return function (...args) {
     if (timer) {
       clearTimeout(timer);
